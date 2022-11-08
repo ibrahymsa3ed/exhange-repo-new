@@ -1,0 +1,33 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+
+	Home
+
+{% endblock %}
+
+{% block body %}
+<!doctype html>
+<html lang="en">
+
+<div class="container">
+	<body>
+	<?php include 'nav.php'; ?>
+	<br><br>
+	<h1>Savings</h1>
+
+	<div class="row">
+		{{ form_start(form) }}
+		{{ form_widget(form) }}
+		<br>
+	<div class="col-12">
+		<button type="submit" class="btn btn-dark">Add</button>
+	</div>
+
+{{ form_end(form) }}
+
+	</body>
+</div>
+
+</html>
+{% endblock %}

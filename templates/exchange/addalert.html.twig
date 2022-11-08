@@ -1,0 +1,22 @@
+{%  extends "base.html.twig" %}
+
+{% block title   %}
+
+	Add Alert
+
+{% endblock %}
+
+{% block body    %}
+<div class="row container">
+	<h3>Alert Me When</h3>
+	{{ form_start(form) }}
+	{{ form_widget(form) }}
+	<br>
+	<div class="col-12">
+		<button type="submit" class="btn btn-dark">Add</button>
+	</div>
+
+	{{ form_end(form) }}
+	</div>
+{% endblock %}
+

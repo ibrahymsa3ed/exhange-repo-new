@@ -1,0 +1,41 @@
+{%  extends "base.html.twig" %}
+
+{% block title   %}
+
+	view
+
+{% endblock %}
+
+{% block body    %}
+	<div class="container" style="width:500px;">
+		<div class="table-container">
+
+			<table class="table">
+				<thead>
+				<tr>
+
+					<th scope="col">ID</th>
+					<th scope="col">Currency</th>
+					<th scope="col">Amount</th>
+					<th scope="col">Delete</th>
+				</tr>
+				</thead>
+				<tbody>
+				{% for info in data %}
+
+				<tr>
+
+					<td>{{ info.id }}</td>
+					<td>{{ info.currency }}</td>
+					<td>{{ info.amount }}</td>
+					<td><a href="/xe/exchange/delete/{{ info.id }}" class="btn btn-danger">Delete</a></td>
+				</tr>
+
+				{% endfor %}
+				</tbody>
+			</table>
+
+		</div>
+	</div>
+{% endblock %}
+

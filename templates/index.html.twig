@@ -1,0 +1,18 @@
+{%  extends "base.html.twig" %}
+
+{% block title   %}
+
+	today
+
+{% endblock %}
+
+{% block body    %}
+	{% set totalPrice = 0 %}
+	{% for total in amounts %}
+
+
+		{% set totalPrice = totalPrice +total.amount %}
+	{% endfor %}
+	{{ totalPrice }}
+{% endblock %}
+

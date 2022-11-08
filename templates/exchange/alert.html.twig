@@ -1,0 +1,44 @@
+{%  extends "base.html.twig" %}
+
+{% block title   %}
+
+	Alert
+
+{% endblock %}
+
+{% block body    %}
+	<div class="container" style="width:500px;">
+		<div class="table-container">
+
+			<table class="table">
+				<thead>
+				<tr>
+
+					<th scope="col">Curreny from</th>
+					<th scope="col">Currency to</th>
+					<th scope="col">Function</th>
+					<th scope="col">Result</th>
+				</tr>
+				</thead>
+				<tbody>
+				{% for data in alert %}
+
+					<tr>
+
+						<td>{{ data.cur1 }}</td>
+						<td>{{ data.cur2 }}</td>
+						<td>{{ data.func }}</td>
+						<td>{{ data.result }}</td>
+						<td><a href="/xe/exchange/deletealert/{{ data.id }}" class="btn btn-danger">Delete</a></td>
+
+
+					</tr>
+
+				{% endfor %}
+				</tbody>
+			</table>
+
+		</div>
+	</div>
+{% endblock %}
+
